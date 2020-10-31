@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Hermann - Creative Ajax Portfolio Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Perfect masonry isotope portfolio template. Masonry portfolio examples. Build your portfolio with soho template." />
+    <meta name="keywords" content="ajax portfolio, portfolio design, portfolio template, minimal portfolio, masonry isotope portfolio " />
+    <meta name="author" content="ClaPat Studio">
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+	<link rel="icon" type="image/ico" href="images/favicon.ico" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>     
+   
+</head>
+    
+
+
+
+
+
+
+<body class="animsition">
+    
+    
+    
+    <header class="hidden scroll-hide">
+    
+    	<div id="header-container">
+    
+            <div id="logo"><a class="animation-link" href="index.html"><img src="images/logo.png" alt=""></a></div>
+            
+            <div id="nav-menu">
+                <span class="btn_menu_line"></span>
+                <span class="btn_menu_line"></span>
+                <span class="btn_menu_line"></span>
+            </div>
+            
+            <nav>
+                
+                <ul data-breakpoint="1024" class="flexnav">
+                    <li class="menu-item"><a class="animation-link active" href="index.html">Documentation</a></li>
+                    <li class="menu-item"><a class="animation-link" href="credits.html">Credits</a></li>
+                    <li class="menu-item"><a target="_blank" href="http://themeforest.net/user/clapat/portfolio">Themes</a></li>
+                </ul>
+            
+            </nav>
+        
+        </div>
+    
+    </header>
+    
+    
+    
+    
+    <div id="hero" class="hidden hero-big"><div id="hero-styles" class="prl opc">
+    
+    	<!-- Full Screen Image -->
+        <div class="hero-image" style="background-image:url(images/1.jpg)">
+            <div class="overlay" style="background-color:rgba(0,0,0,0.85)">
+                <!-- Image Caption -->
+                <div class="clapat-caption light-content">
+                    <div class="caption-content center-center">
+                    
+                    	<h1>Hermann Template Documentation</h1><br>
+                        <p>Created: 30/05/2017  -  Updated 30/05/2017</p><br>
+                        <a class="clapat-button outline-button scroll" href="#main">Let's Start</a>
+                                            	                            
+                    </div>
+                </div>
+                <!--/Image Caption -->
+            </div>
+        </div>
+        <!--/Full Screen Image -->
+    
+    </div></div>
+    
+    
+    
+    
+    <!-- Main --> 
+    <div id="main">
+        
+        <div class="container">
+        
+        	
+             <!-- Documentation Content --> 
+             <div class="doc-content">
+             
+             	<h4>Installation</h4>
+            
+                <p>After unzip template Files, you will found <strong>www</strong> folder that include all the temeplate files.<br><br>
+
+You can view this template in any web browser from your desktop computer. Because some js files are external, you need an internet connection to display correctly the template.<br><br>
+
+Start your FTP client (I persoanlly use Total Commander) and login. Login to your server. You will need your server name (often times this will be your domain name), username, and password that you setup with the hosting company.<br><br>
+
+Locate the domain folder you wish to upload your Theme files to on your server. You are going to want to click and drag every file into your FTP client. </p>
+                
+                
+                
+                
+                
+                <hr class="line">
+                
+                
+                
+                
+                
+                
+                <h4>Body Options</h4><br>
+                
+				<p>This template require 2 logo images. Negative and positive versions</p>
+                
+                <pre class="brush: js; toolbar: false; gutter: false;">                    
+               	
+                	< body class="virtual-scroll bg-change">
+                    
+                    ...
+                                    
+                </pre>
+                
+                
+				<code>.virtual-scroll</code><br><br>
+				<p>This class will enable the page smooth scrolling</p>
+                
+                <code>.bg-change</code><br><br>
+				<p>This class will change the background color when you will scroll to contact section. To modify the color on contact section, go to scropts.js at line 169</p>
+                
+                
+                
+                
+                
+                <hr class="line">
+                
+                
+                
+                
+                
+                <h4>The Logo</h4><br>
+                
+				<p>This template require 2 logo images. Negative and positive versions</p>
+                
+                <pre class="brush: js; toolbar: false; gutter: false;">                    
+               	
+                	<div id="logo">
+                        <a href="index.html">
+                            <img class="black-logo" src="images/logo.png" alt="Logo Black">
+                            <img class="white-logo" src="images/logo-white.png" alt="Logo White">
+                        </a>
+                    </div>
+                                    
+                </pre>
+                
+                
+				<p>The negative version will appear over the showcase image when a project is open.</p>
+                
+                
+                
+                
+                
+                <hr class="line">
+                
+                
+                
+                
+                
+                
+                <h4>Page Structure</h4><br>
+                
+				<p>The page is divided into 2 blocks. The content and the projects images.</p>
+                
+                <pre class="brush: js; toolbar: false; gutter: false;">                    
+               	
+                	<div id="showcase-gallery">
+                    ... Showcase Images Here...
+                    </div>
+                    
+                    <div id="main-content">
+                    ... Main Content Here...
+                    </div>
+                                    
+                </pre>
+                
+                
+                
+                <hr class="line">
+                
+                
+                
+                
+                
+                
+                <h4>Showcase Image Gallery</h4><br>
+                
+                <p>Here is the showcase structure</p>
+                
+                <pre class="brush: js; toolbar: false; gutter: false;">                    
+               	<div id="showcase-gallery">                
+                    <div class="showcase-img" data-aux="project-01" data-src="images/p1.jpg"></div>
+                    <div class="showcase-img light-content" data-aux="project-02" data-src="images/p2.jpg"></div>
+                    
+                    ... Other Showcase Images Here...           
+                    
+                </div>                  
+                </pre>
+                
+                
+                <code>.light-content</code><br><br>
+				<p>Add this class when you have a darker image to display the negative logo version (second div eg.)</p>
+                
+                
+                
+                
+                <hr class="line">
+                
+                
+                
+                
+                
+                
+                <h4>Showcase List Links</h4><br>
+                
+                <p>Here is the showcase list structure</p>
+                
+                <pre class="brush: js; toolbar: false; gutter: false;">                    
+                    <ul class="showcase-list">
+                        <li><a data-url="project1.html" data-aux="project-01">Roast Coffee<span>Branding</span></a></li>
+                        <li><a data-url="project2.html" data-aux="project-02">Smart Elephant<span>Web Design</span></a></li>
+                        
+                        ... Other Showcase Link Here...  
+                        
+                    </ul>                 
+                </pre>
+                
+                <code>data-url="project1.html"</code><br><br>
+				<p>The project HTML page will be open</p>
+                
+                <code>data-aux="project-01"</code><br><br>
+				<p>The reference for the project image.</p>
+                
+                
+                
+                
+                
+               
+                
+                
+                
+                
+                
+                <hr class="line">
+                
+                
+                
+                
+                <h4>Ajax Project Load</h4><br>
+                
+                <p>Inside here will be loaded via ajax the project html file</p>
+                
+                <pre class="brush: js; toolbar: false; gutter: false;">                    
+               	<div id="project-holder">        
+                    <div id="project-data">
+                    ...
+                    </div>        
+                </div>                    
+                </pre>
+                
+                
+                
+                
+                
+                
+                <hr class="line">
+                
+                
+                
+                
+                <h4>Page Row Section</h4><br>
+                
+                <p>Below you will find the <strong>vc_row</strong> extra classes and options</p>
+                
+                <pre class="brush: js; toolbar: false; gutter: false;">                    
+               	<div class="vc_row">
+                	<div class="container">
+                    ...
+                    </div>        
+                </div>                    
+                </pre>
+                
+                <code>.small</code><br><br>
+				<p>Will decrease the container width</p>
+                
+                <code>.full</code><br><br>
+				<p>Will make the container full width</p>
+                
+                <code>.row_padding_top</code><br><br>
+				<p>Add padding to top</p>
+                
+                <code>.row_padding_bottom</code><br><br>
+				<p>Add padding to bottom</p>
+                
+                
+                
+                
+                
+                
+                
+                
+			
+                
+             
+             </div>
+             <!--/Documentation Content -->   
+             
+             
+             
+             
+             
+             
+             
+        
+        </div>
+
+    </div>
+    <!--/Main -->
+    
+    
+    
+    <!-- Footer -->
+    <footer>
+    
+    	<div id="footer-container">
+            
+            <div class="outer">        
+                <div class="inner">
+                
+                    <div class="scrolltotop"><span class='holder'></span></div>                    
+                        
+                    <p class="copyright">2017 &copy; ClaPat Themes. All rights Reserved.</p>         
+                    
+                    <ul class="socials">   
+                    	<li><a target="_blank" href="https://facebook.com/clapat.ro" class="link"><i class="fa fa-facebook"></i></a></li>
+                        <li><a target="_blank" href="https://dribbble.com/ClaPat" class="link"><i class="fa fa-dribbble"></i></a></li> 	
+                        <li><a target="_blank" href="https://twitter.com/clapatdesign" class="link"><i class="fa fa-twitter"></i></a></li>
+                        <li><a target="_blank" href="https://www.behance.net/clapat" class="link"><i class="fa fa-behance"></i></a></li>
+                    </ul>
+                
+                </div>        
+            </div>
+            
+        </div>
+        
+    </footer>
+    <!--/Footer -->
+    
+   
+
+
+    
+    
+    
+
+		
+	<script src="js/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+
+</body>
+
+</html>
