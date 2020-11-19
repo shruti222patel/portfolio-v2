@@ -319,18 +319,29 @@ Function Contact Formular
 				var action = $(this).attr('action');
 				$("#message").slideUp(750,function() {
 					$('#message').hide();
-					$('#submit').attr('disabled','disabled');		
+					$('#submit').attr('disabled','disabled');	
 					$.post(action, {
 						name: $('#name').val(),
 						email: $('#email').val(),
-						comments: $('#comments').val()
+						comments: $('#comments').val(),
+						accessKey: $('#accessKey').val(),
+						replyTo: "@",
+						subject: "Personal Website Contact Form -- "+$('#name').val(),
 					},
 					function(data){
-						document.getElementById('message').innerHTML = data;
+						;
 						$('#message').slideDown('slow');
 						$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
 						$('#submit').removeAttr('disabled');
-						if(data.match('success') != null) $('#contactform').slideUp('slow');		
+						if(data['success']) {
+							$('#contactform').slideUp('slow');
+							document.getElementById('message').innerHTML = `<fieldset>
+							<div id='success_page'>
+							<h3>Email Sent Successfully.</h3>
+							<p>Thank you. Your message has been sent.</p>
+							</div>
+							</fieldset>`
+						}		
 					}
 				);		
 				});		
