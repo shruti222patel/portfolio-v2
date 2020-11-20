@@ -323,7 +323,7 @@ Function Contact Formular
 					$.post(action, {
 						name: $('#name').val(),
 						email: $('#email').val(),
-						comments: $('#comments').val(),
+						message: $('#comments').val(),
 						accessKey: $('#accessKey').val(),
 						replyTo: "@",
 						subject: "Personal Website Contact Form -- "+$('#name').val(),
