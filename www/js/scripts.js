@@ -320,30 +320,41 @@ Function Contact Formular
 				$("#message").slideUp(750,function() {
 					$('#message').hide();
 					$('#submit').attr('disabled','disabled');	
-					$.post(action, {
-						url:"//formspree.io/f/moqppeod",
-						name: $('#name').val(),
-						email: $('#email').val(),
-						message: $('#comments').val(),
-						accessKey: $('#accessKey').val(),
-						replyTo: "@",
-						subject: "Personal Website Contact Form -- "+$('#name').val(),
-					},
-					function(data){
-						$('#message').slideDown('slow');
-						$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
-						$('#submit').removeAttr('disabled');
-						if(data['success']) {
-							$('#contactform').slideUp('slow');
-							document.getElementById('message').innerHTML = `<fieldset>
-							<div id='success_page'>
-							<h3>Email Sent Successfully.</h3>
-							<p>Thank you. Your message has been sent.</p>
-							</div>
-							</fieldset>`
-						}		
-					});		
+					// $.post(action, {
+					// 	name: $('#name').val(),
+					// 	email: $('#email').val(),
+					// 	message: $('#comments').val(),
+					// 	accessKey: $('#accessKey').val(),
+					// 	replyTo: "@",
+					// 	subject: "Personal Website Contact Form -- "+$('#name').val(),
+					// },
+					// function(data){
+					// 	$('#message').slideDown('slow');
+					// 	$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
+					// 	$('#submit').removeAttr('disabled');
+					// 	if(data['success']) {
+					// 		$('#contactform').slideUp('slow');
+					// 		document.getElementById('message').innerHTML = `<fieldset>
+					// 		<div id='success_page'>
+					// 		<h3>Email Sent Successfully.</h3>
+					// 		<p>Thank you. Your message has been sent.</p>
+					// 		</div>
+					// 		</fieldset>`
+					// 	}		
+					// });		
 
+					$.ajax({
+						url: "//formspree.io/f/moqppeod", 
+						method: "POST",
+						data: {name: $('#name').val(),
+							email: $('#email').val(),
+							message: $('#comments').val(),
+							accessKey: $('#accessKey').val(),
+							replyTo: "@",
+							subject: "Personal Website Contact Form -- "+$('#name').val()
+						},
+						dataType: "json"
+					});
 				$('#message').slideDown('slow');
 				$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
 				$('#submit').removeAttr('disabled');
