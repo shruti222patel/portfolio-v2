@@ -320,6 +320,10 @@ Function Contact Formular
 				$("#message").slideUp(750,function() {
 					$('#message').hide();
 					$('#submit').attr('disabled','disabled');	
+
+					// Static Forms XYZ Form
+					// https://www.staticforms.xyz/
+					
 					// $.post(action, {
 					// 	name: $('#name').val(),
 					// 	email: $('#email').val(),
@@ -343,29 +347,28 @@ Function Contact Formular
 					// 	}		
 					// });		
 
+					// Formspree Form
+					// https://formspree.io/forms/moqppeod/submissions
 					$.ajax({
 						url: "//formspree.io/f/moqppeod", 
 						method: "POST",
 						data: {name: $('#name').val(),
 							email: $('#email').val(),
-							message: $('#comments').val(),
-							accessKey: $('#accessKey').val(),
-							replyTo: "@",
-							subject: "Personal Website Contact Form -- "+$('#name').val()
+							message: $('#comments').val()
 						},
 						dataType: "json"
 					});
-				$('#message').slideDown('slow');
-				$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
-				$('#submit').removeAttr('disabled');
-				
-				$('#contactform').slideUp('slow');
-				document.getElementById('message').innerHTML = `<fieldset>
-				<div id='success_page'>
-				<h3>Email Sent Successfully.</h3>
-				<p>Thank you. Your message has been sent.</p>
-				</div>
-				</fieldset>`
+					$('#message').slideDown('slow');
+					$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
+					$('#submit').removeAttr('disabled');
+					
+					$('#contactform').slideUp('slow');
+					document.getElementById('message').innerHTML = `<fieldset>
+					<div id='success_page'>
+					<h3>Email Sent Successfully.</h3>
+					<p>Thank you. Your message has been sent.</p>
+					</div>
+					</fieldset>`
 
 				});		
 				return false;		
