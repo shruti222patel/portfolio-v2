@@ -321,6 +321,7 @@ Function Contact Formular
 					$('#message').hide();
 					$('#submit').attr('disabled','disabled');	
 					$.post(action, {
+						url:"//formspree.io/f/moqppeod",
 						name: $('#name').val(),
 						email: $('#email').val(),
 						message: $('#comments').val(),
@@ -329,7 +330,6 @@ Function Contact Formular
 						subject: "Personal Website Contact Form -- "+$('#name').val(),
 					},
 					function(data){
-						;
 						$('#message').slideDown('slow');
 						$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
 						$('#submit').removeAttr('disabled');
@@ -342,8 +342,20 @@ Function Contact Formular
 							</div>
 							</fieldset>`
 						}		
-					}
-				);		
+					});		
+
+				$('#message').slideDown('slow');
+				$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
+				$('#submit').removeAttr('disabled');
+				
+				$('#contactform').slideUp('slow');
+				document.getElementById('message').innerHTML = `<fieldset>
+				<div id='success_page'>
+				<h3>Email Sent Successfully.</h3>
+				<p>Thank you. Your message has been sent.</p>
+				</div>
+				</fieldset>`
+
 				});		
 				return false;		
 			});		
